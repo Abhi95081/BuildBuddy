@@ -10,19 +10,22 @@ import com.example.buildbuddy.SplashScreen
 
 /** Nav routes */
 private object Routes {
+    const val SPLASH = "splash"
     const val HOME = "home"
     const val BUILD = "build"
 }
 
 @Composable
 fun AppNavigator() {
-
     val nav = rememberNavController()
 
     NavHost(
         navController = nav,
-        startDestination = "splash"
+        startDestination = Routes.SPLASH
     ) {
+        composable(Routes.SPLASH) {
+            SplashScreen(navController = nav)
+        }
         composable(Routes.HOME) {
             HomeScreen(onStartClick = { nav.navigate(Routes.BUILD) })
         }
@@ -31,4 +34,3 @@ fun AppNavigator() {
         }
     }
 }
-
