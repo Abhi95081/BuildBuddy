@@ -1,6 +1,8 @@
 package com.example.buildbuddy
 
+import android.os.Build
 import android.view.animation.OvershootInterpolator
+import androidx.annotation.RequiresApi
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -22,6 +24,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import kotlinx.coroutines.delay
 
+@RequiresApi(Build.VERSION_CODES.DONUT)
 @Composable
 fun SplashScreen(navController: NavHostController) {
     val scale = remember { Animatable(0f) }
