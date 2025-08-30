@@ -24,7 +24,6 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import kotlinx.coroutines.delay
 
-@RequiresApi(Build.VERSION_CODES.DONUT)
 @Composable
 fun SplashScreen(navController: NavHostController) {
     val scale = remember { Animatable(0f) }
