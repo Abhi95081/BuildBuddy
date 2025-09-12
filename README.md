@@ -87,8 +87,3 @@ Returns link like:
  - CI/CD integration
  - Analytics for build history
 
-### 📜 License
-
-- MIT License © 2025 BuildBuddy Contributors
-
----
